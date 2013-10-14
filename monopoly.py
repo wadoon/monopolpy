@@ -6,36 +6,40 @@ import random
 
 from pprint import pprint
 from yaml import load_all as yamlopen
-from colors import cprintln as cprint, register_tag
+
+try:
+    from colors import cprintln as cprint, register_tag
 
 
-register_tag('game', fg="black")
-register_tag('dice', fg="red")
-register_tag('player', fg="blue", bg="white")
-register_tag('move', bg="blue", fg="white")
-register_tag('field', style="bold", bg="white")
-register_tag('debug', fg="red", style="bold")
+    register_tag('game', fg="black")
+    register_tag('dice', fg="red")
+    register_tag('player', fg="blue", bg="white")
+    register_tag('move', bg="blue", fg="white")
+    register_tag('field', style="bold", bg="white")
+    register_tag('debug', fg="red", style="bold")
 
-register_tag('money', fg="green", bg="yellow")
+    register_tag('money', fg="green", bg="yellow")
 
-register_tag('red', fg="red")
-register_tag('lightblue', fg=87, bg=241)
-register_tag('darkblue', fg=21)
-register_tag('lila', fg=93)
-register_tag('orange', fg=172)
-register_tag('green', fg=28)
-register_tag('pink', fg=207)
-register_tag('yellow', fg=226, bg=241)
+    register_tag('red', fg="red")
+    register_tag('lightblue', fg=87, bg=241)
+    register_tag('darkblue', fg=21)
+    register_tag('lila', fg=93)
+    register_tag('orange', fg=172)
+    register_tag('green', fg=28)
+    register_tag('pink', fg=207)
+    register_tag('yellow', fg=226, bg=241)
 
-register_tag('tax')
-register_tag('trainstation')
-register_tag('freepark')
-register_tag('eventfield')
-register_tag('socialfield')
-register_tag('plants')
-register_tag('jail')
-register_tag('gotojail')
-register_tag('startfield')
+    register_tag('tax')
+    register_tag('trainstation')
+    register_tag('freepark')
+    register_tag('eventfield')
+    register_tag('socialfield')
+    register_tag('plants')
+    register_tag('jail')
+    register_tag('gotojail')
+    register_tag('startfield')
+except ImportError:
+    cprint = print
 
 def register( registry , name):
     def decorator(fn):
