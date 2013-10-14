@@ -2,7 +2,14 @@ mortage: 0.5
 dismortage: 0.55
 doubles_jail_limit: 3
 jail_field: 10
-startmoney: 10000
+startmoney: 1000
+startpassmoney: 500
+plantfactors: [20, 40]
+tax: 2000
+available_houses: 32
+available_hotels: 12
+jail_fee: 500
+jail_tries: 3
 
 
 types:  
@@ -33,27 +40,41 @@ families:
   lila:
     color: 803399
     type: normalstreet
+    houseprice: 50
+
   lightblue:
     color: 80CCFF
     type: normalstreet
+    houseprice: 50
   pink:
     color: cc44cc
     type: normalstreet
+    houseprice: 100
+
   orange:
     color: ff8000
     type: normalstreet
+    houseprice: 100
+
   red: 
     color: ff0000
     type: normalstreet
+    houseprice: 150
+
   yellow: 
     color: ffff00
     type: normalstreet
+    houseprice: 150
+
   green:
     color: 00ff00
     type: normalstreet
+    houseprice: 200
+
   darkblue:
     color: 2020cc
     type: normalstreet
+    houseprice: 200
 
   plants:
     color: 000000
@@ -62,6 +83,8 @@ families:
   trainstation:
     color: 000000
     type: trainstation
+    base_rent: 250
+    buyprice: 1000
 
   eventfield:
     color: cccccc
@@ -119,7 +142,7 @@ fields:
 
   - family: lightblue
     name: Elisenstraße
-    buyprice: 100,
+    buyprice: 100
     rent: [ 6, 30, 90, 270, 400, 550, 50, 55 ]
    
   - family: lightblue
@@ -243,7 +266,7 @@ fields:
   - family: darkblue
     name: Parkstraße
     buyprice:  350
-    rent:  35, 175, 500, 1100, 1300, 1500
+    rent:  [ 35, 175, 500, 1100, 1300, 1500]
 
   - family: tax
     name: Zusatzsteuer
@@ -252,4 +275,4 @@ fields:
   - family: darkblue
     name: Schlossallee
     buyprice:  400
-    rent:  50, 200, 600, 1400, 1700, 2000
+    rent:  [50, 200, 600, 1400, 1700, 2000]
