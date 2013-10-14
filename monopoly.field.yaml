@@ -1,0 +1,255 @@
+mortage: 0.5
+dismortage: 0.55
+doubles_jail_limit: 3
+jail_field: 10
+startmoney: 10000
+
+
+types:  
+  normalstreet: 
+    on_visit: visitNormalStreet
+    
+  trainstation:
+    on_visit: visitTrainStation
+
+  gotojail: 
+    on_visit: visitGotoJail
+
+  socialfield:    
+    on_visit:
+
+  eventfield:
+    on_visit:
+      
+  plants:
+    on_visit:
+
+  tax: 
+    on_visit: visitTax
+
+
+
+families: 
+  lila:
+    color: 803399
+    type: normalstreet
+  lightblue:
+    color: 80CCFF
+    type: normalstreet
+  pink:
+    color: cc44cc
+    type: normalstreet
+  orange:
+    color: ff8000
+    type: normalstreet
+  red: 
+    color: ff0000
+    type: normalstreet
+  yellow: 
+    color: ffff00
+    type: normalstreet
+  green:
+    color: 00ff00
+    type: normalstreet
+  darkblue:
+    color: 2020cc
+    type: normalstreet
+
+  plants:
+    color: 000000
+    type: plants
+
+  trainstation:
+    color: 000000
+    type: trainstation
+
+  eventfield:
+    color: cccccc
+    type: eventfield
+    
+  socialfield:
+    color: eeeeee
+    type: socialfield
+
+  tax: 
+    color: 000000
+    type: tax
+
+
+
+fields:
+  -
+    family: startfield
+    name: Start/Goal
+    color: 000000
+    on_pass: passStartField
+    
+  -
+    family: lila
+    name: Badstraße
+    buyprice: 60
+    rent: [ 2, 10, 30, 90, 160, 250 ]
+
+  -
+    family: socialfield
+    name: Gemeinschaftsfeld
+    
+  - 
+    family: lila
+    name: Turmstraße
+    buyprice: 60
+    rent: [ 4, 20, 60, 180, 320, 450 ]
+  
+  - 
+    family: tax
+    name: Gemeinschaftssteuer
+    amount: 50
+    
+
+  - family: trainstation
+    name: Südbahnhof
+         
+  - family: lightblue
+    name: Chausseestraße
+    buyprice: 100
+    rent: [6, 30, 90, 270, 400, 550]    
+
+  - family: eventfield
+    name: Ereignisfeld
+
+  - family: lightblue
+    name: Elisenstraße
+    buyprice: 100,
+    rent: [ 6, 30, 90, 270, 400, 550, 50, 55 ]
+   
+  - family: lightblue
+    name: Poststraße
+    buyprice: 120
+    rent: [8, 40, 100, 300, 450, 550]
+
+  - family: jail
+    name: Gefängnis
+
+  - family: lila
+    name: Seestraße
+    buyprice: 140
+    rent: [10, 50, 150, 450, 625, 750]
+
+  - family: plants
+    name: Elektrizitätswerk
+
+  - family: pink
+    name: Hafenstraße
+    buyprice:  140
+    rent:  [10, 50, 150, 450, 625, 750]
+
+  - family: pink
+    name: Neue Straße
+    buyprice: 160
+    rent: [12, 60, 180, 500, 700, 900]
+
+  - family: trainstation 
+    name: Westbahnhof
+
+  - family: orange 
+    name: Münchener Straße
+    buyprice: 180
+    rent: [14, 70, 200, 550, 750, 950]
+
+  - family: socialfield
+    name: Gemeinschaftsfeld
+
+  - family: orange
+    name: Berliner Straße
+    buyprice:  200
+    rent:  [16, 80, 220, 600, 800, 1000]
+
+  - 
+    family: orange
+    name: Wiener Straße
+    buyprice:  180
+    rent:  [14, 70, 200, 550, 750, 950]
+
+  - family: freepark
+    name: Frei Parken
+     
+  - family: red
+    name: Theaterstraße
+    buyprice:  220
+    rent:  [18, 90, 250, 700, 875, 1050]
+
+  - family: eventfield
+    name: Ereignisfeld
+
+  - family: red
+    name: Museumstraße
+    buyprice:  220
+    rent:  [18, 90, 250, 700, 875, 1050]
+
+  - family: red
+    name: Opernplatz
+    buyprice:  240
+    rent:  [20, 100, 300, 750, 925, 1100]
+
+  - family: trainstation
+    name: Nordbahnhof
+ 
+  - family: yellow
+    name: Lessingstraße
+    buyprice:  260
+    rent:  [22, 110, 330, 800, 975, 1150]
+  
+  - family: yellow
+    name: Schillerstraße
+    buyprice:  260
+    rent:  [22, 110, 330, 800, 975, 1150]
+
+  - family: plants
+    name: Wasserwerk
+
+  - family: yellow
+    name: Goethestraße
+    buyprice:  280
+    rent:  [24, 120, 360, 850, 1025, 1200]
+
+  - family: gotojail
+    name: Gehe ins Gefängnis
+  
+
+  - family: green
+    name: Rathausplatz
+    buyprice:  300
+    rent:  [26, 130, 390, 900, 1100, 1275]
+
+  - family: green
+    name: Hauptstraße
+    buyprice:  300
+    rent:  [26, 130, 390, 900, 1100, 1275]
+
+  - family: socialfield
+    name: Gemeinschaftsfeld
+
+  - family: green
+    name: Bahnhofstraße
+    buyprice:  320
+    rent:  [28, 150, 450, 1000, 1200, 1400]
+
+  - family: trainstation
+    name: Ostbahnhof
+
+  - family: eventfield
+    name: Ereignisfeld
+
+  - family: darkblue
+    name: Parkstraße
+    buyprice:  350
+    rent:  35, 175, 500, 1100, 1300, 1500
+
+  - family: tax
+    name: Zusatzsteuer
+    amount: 100
+
+  - family: darkblue
+    name: Schlossallee
+    buyprice:  400
+    rent:  50, 200, 600, 1400, 1700, 2000
