@@ -1,6 +1,10 @@
 monopolpy
 =========
 
+[![Build Status](https://travis-ci.org/areku/monopolpy.png)](https://travis-ci.org/areku/monopolpy)
+[![Coverage Status](https://coveralls.io/repos/areku/monopolpy/badge.png)](https://coveralls.io/r/areku/monopolpy)
+
+
 A simple simulation of monopoly in python. 
 
 
